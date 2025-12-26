@@ -13,13 +13,15 @@ print("Longitud: ", lon)
 print("\n\n")
 
 data_1 = WeatherData()
-pprint(data_1.get_weather(lat=lat, lon=lon))
+response_data = data_1.get_weather(lat=lat, lon=lon)
+pprint(response_data)
+print("\n")
+print(data_1.get_weather_icon(response_data))
 print("\n\n")
 
 data_2 = GeoDataLocation()
 pprint(data_2.get_location(lat,lon))
 print("\n\n")
-print()
 
 data_4 = ISSData()
 pprint(data_4.get_ISS_position())
