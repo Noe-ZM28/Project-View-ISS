@@ -3,8 +3,6 @@ from requests.models import Response
 from requests.exceptions import RequestException
 
 class API_reponse:
-    def construc_url(self, **kwars)->str: ...
-
     def get_response_api(self, url:str, to_JSON:bool= True) -> Response | dict | None:
         try:
             print(url)
